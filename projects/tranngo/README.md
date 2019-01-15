@@ -1,2 +1,1 @@
-Jade Ngoc Tran tranngo
-
+This is my assignment-1 submission!
