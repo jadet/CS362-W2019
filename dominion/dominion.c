@@ -1189,7 +1189,7 @@ int updateCoins(int player, struct gameState *state, int bonus)
 
 int goAdventurer(struct gameState *state, int z, int drawntreasure, int cardDrawn, int temphand[MAX_HAND], int currentPlayer){
 
-    while(drawntreasure<2){
+    while(drawntreasure<3){
         if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
             shuffle(currentPlayer, state);
         }
@@ -1225,10 +1225,7 @@ int goCouncil_Room(struct gameState *state, int handPos, int currentPlayer){
     //Each other player draws a card
     for (i = 0; i < state->numPlayers; i++)
     {
-        if ( i != currentPlayer )
-        {
             drawCard(i, state);
-        }
     }
 
     //put played card in played card pile
@@ -1250,7 +1247,7 @@ int goFeast(struct gameState *state, int choice1, int currentPlayer, int temphan
     //Backup hand
 
     //Update Coins for Buy
-    updateCoins(currentPlayer, state, 5);
+    updateCoins(currentPlayer, state, 8);
     x = 1;//Condition to loop on
     while( x == 1) {//Buy one card
         if (supplyCount(choice1, state) <= 0){
@@ -1303,7 +1300,7 @@ int goVillage(struct gameState *state, int handPos, int currentPlayer){
     state->numActions = state->numActions + 2;
 
     //discard played card from hand
-    discardCard(handPos, currentPlayer, state, 0);
+    discardCard(handPos, currentPlayer, state, 2);
     return 0;
 
 
@@ -1314,7 +1311,7 @@ int goSmithy(struct gameState *state, int handPos, int currentPlayer){
     int i;
 
     //+3 Cards
-    for (i = 0; i < 3; i++)
+    for (i = 0; i < 5; i++)
     {
         drawCard(currentPlayer, state);
     }
