@@ -2,6 +2,5 @@ Test: whoseTurn() passed
 Test: compare() passed
 Test: gameOver() passed
 Test: kingdomCards() passed
-Smithy test passed
 Adventurer test passed
 Village test passed

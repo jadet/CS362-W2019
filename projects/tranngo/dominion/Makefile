@@ -43,9 +43,9 @@ allMyTests:
 	./unitTest2 >> unittestresult.out
 	./unitTest3 >> unittestresult.out
 	./unitTest4 >> unittestresult.out
-	./cardTest1 >> unittestresult.out
 	./cardTest2 >> unittestresult.out
 	./cardTest3 >> unittestresult.out
+	./cardTest1 >> unittestresult.out
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
 
