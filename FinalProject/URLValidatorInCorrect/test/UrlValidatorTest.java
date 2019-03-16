@@ -93,4 +93,18 @@ public class UrlValidatorTest extends TestCase {
 
    }
 
+
+   public void testisValidAuthority()
+   {
+      UrlValidator validator = new UrlValidator();
+      System.out.println("\n***START isValidAuthority TEST***\n");
+      System.out.println("\nTesting www.google.com:80");
+      assertEquals( true,validator.isValidAuthority("www.google.com:80"));
+      System.out.println("\nTesting www.google.com:3000");
+      assertEquals(true,validator.isValidAuthority("www.google.com:3000"));
+      System.out.println("\nTesting www.google.com:900000");
+      assertEquals(false,validator.isValidAuthority("www.google.com:900000"));
+      System.out.println("\n***END isValidAuthority TEST***\n");
+   }
+
 }
