@@ -107,4 +107,21 @@ public class UrlValidatorTest extends TestCase {
       System.out.println("\n***END isValidAuthority TEST***\n");
    }
 
+   public void testisValidSchemeTest()
+   {
+      UrlValidator validator = new UrlValidator();
+      System.out.println("\n***START isValidScheme TEST***\n");
+      System.out.println("\nTesting http");
+      assertEquals( true,validator.isValidScheme("http"));
+      System.out.println("\nTesting https");
+      assertEquals( true,validator.isValidScheme("https"));
+      System.out.println("\nTesting ftp");
+      assertEquals( true,validator.isValidScheme("ftp"));
+      System.out.println("\nTesting err");
+      assertEquals( false,validator.isValidScheme("err"));
+      System.out.println("\n***END isValidScheme TEST***\n");
+
+   }
+
+
 }
