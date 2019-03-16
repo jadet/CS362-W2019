@@ -36,14 +36,92 @@ public class UrlValidatorTest extends TestCase {
 		 //You can use this function to implement your Second Partition testing	   
 
    }
-   //You need to create more test cases for your Partitions if you need to 
-   
-   public void testIsValid()
-   {
-	   //You can use this function for programming based testing
+
+   /**
+    * Programming Based Unit Tests
+    */
+   public void testIsValid() {
+      int testRounds = 10; // run the test 10 times
+      int bugCount = 0;
+
+      // define arrays of valid url parts
+      String[] validSchemes = {"http://", "", "h3tp://"};
+      String[] validAuthority = {"www.google.com", "google.com"};
+      String[] validPort = {":80", ":9", ":100"};
+      String[] validPath = {"/test1", "/"};
+      String[] validQueries = {"?action=view", " "};
+
+      // define an array of invalid URLS
+      String[] invalidUrls = new String[testRounds];
+      int invalidUrlsCount = 0;
+      System.out.println("\n***START isValid TEST***\n");
+      System.out.println("\nTesting combinations of valid URL parts to form valid URLs:");
+
+      for(int i = 0; i < testRounds; i++) {
+         // randomize url parts by getting random index for each array
+         int schemeIndex = (int) (Math.random() * 3);
+         int authorityIndex = (int) (Math.random() * 2);
+         int portIndex = (int) (Math.random() * 3);
+         int pathIndex = (int) (Math.random() * 2);
+         int queriesIndex = (int) (Math.random() *2);
+
+         String url = validSchemes[schemeIndex] + validAuthority[authorityIndex] + validPort[portIndex] + validPath[pathIndex] + validQueries[queriesIndex];
+         UrlValidator validator = new UrlValidator();
+
+         // use the isValid function to check if the final Url is valid
+         boolean valid = validator.isValid(url);
+
+         // if the Url is not valid, increase the bug count and add this url to invalidUrls array
+         if(valid == false) {
+            bugCount++;
+            invalidUrls[invalidUrlsCount] = url;
+            invalidUrlsCount++;
+         }
+
+      }
+
+      // print results
+      System.out.println("\nNumber of invalid Urls from valid URL parts: " + bugCount);
+      System.out.println("\nInvalid URLs: \n");
+      for (int j = 0; j < invalidUrls.length; j++) {
+         if(invalidUrls[j] != null){
+            System.out.println(invalidUrls[j] + "\n");
+         }
+      }
+      System.out.println("\n***END isValid TEST***\n");
+
 
    }
-   
+
+
+   public void testisValidAuthority()
+   {
+      UrlValidator validator = new UrlValidator();
+      System.out.println("\n***START isValidAuthority TEST***\n");
+      System.out.println("\nTesting www.google.com:80");
+      assertEquals( true,validator.isValidAuthority("www.google.com:80"));
+      System.out.println("\nTesting www.google.com:3000");
+      assertEquals(true,validator.isValidAuthority("www.google.com:3000"));
+      System.out.println("\nTesting www.google.com:900000");
+      assertEquals(false,validator.isValidAuthority("www.google.com:900000"));
+      System.out.println("\n***END isValidAuthority TEST***\n");
+   }
+
+   public void testisValidSchemeTest()
+   {
+      UrlValidator validator = new UrlValidator();
+      System.out.println("\n***START isValidScheme TEST***\n");
+      System.out.println("\nTesting http");
+      assertEquals( true,validator.isValidScheme("http"));
+      System.out.println("\nTesting https");
+      assertEquals( true,validator.isValidScheme("https"));
+      System.out.println("\nTesting ftp");
+      assertEquals( true,validator.isValidScheme("ftp"));
+      System.out.println("\nTesting err");
+      assertEquals( false,validator.isValidScheme("err"));
+      System.out.println("\n***END isValidScheme TEST***\n");
+
+   }
 
 
 }
