@@ -45,11 +45,11 @@ public class UrlValidatorTest extends TestCase {
       int bugCount = 0;
 
       // define arrays of valid url parts
-      String[] validSchemes = {"http://", "", "h3tp://"};
+      String[] validSchemes = {"http://", "https://", "ftp://"};
       String[] validAuthority = {"www.google.com", "google.com"};
       String[] validPort = {":80", ":9", ":100"};
       String[] validPath = {"/test1", "/"};
-      String[] validQueries = {"?action=view", " "};
+      String[] validQueries = {"?action=view", ""};
 
       // define an array of invalid URLS
       String[] invalidUrls = new String[testRounds];
