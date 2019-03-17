@@ -12,17 +12,62 @@ import junit.framework.TestCase;
 
 public class UrlValidatorTest extends TestCase {
 
+	UrlValidator val = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
+	
+	//Various Good and Bad URL Parts
+	//Mix and Match, then Test
+	String[] query = new String [] {"?test=1" , "", "tests1=true&test2=false"};
+	String[] goodPath  = new String[] {"", "/path", "/path", "/path/path", "/1234567"  };
+	String[] badPath  = new String[] {"1234567", "//path", "path//path"  };
+	String[] goodScheme  = new String[] {"https://", "http://", "ftp://"  };
+	String[] badScheme  = new String[] {"https:/", "http//", ""  };
+	String[] goodPorts = new String[] {":80", ":1234", "" };
+	String[] badPorts = new String[] {"80", ":a1234", ":-1", ":" };
+	String[] goodDomain = new String[] {"www.google.com", "www.wikipedia.org", "1.1.1.1" };
+    	String[] badDomain = new String[] {"www.google.moc", "w3.wikipedia.org", "1.1.1.1.1.1.1.1", "" };
+    	String[] Path  = new String[] {"", "/path", "/path", "/path/path", "/1234567", "1234567", "//path", "path//path"  };
+    	String[] Scheme  = new String[] {"https://", "http://", "ftp://", "https:/", "http//", "", "a:"  };
+    	String[] Ports = new String[] {":80", ":1234", "", "80", ":a1234", ":-1", ":" };
+    	String[] Domain = new String[] {"www.google.com", "www.wikipedia.org", "1.1.1.1", "www.google.moc", "w3.wikipedia.org", "1.1.1.1.1.1.1.1", "" };
+
+
+	StringBool[] manualTestURLs = {
+		new StringBool("HTTP://WWW.FACEBOOK.COM", true),
+		//new StringBool("www.facebook.com", true),								//failure: expected T but was F
+		new StringBool("http://", false),
+		new StringBool(".com", false),
+		new StringBool("/hi", false),
+		new StringBool("", false),
+		new StringBool("ftp://", false),
+		new StringBool("bwo.wactec.toophkmfw://", false),
+		new StringBool("oowph.kwt.cofec://wtbma", false),
+		//new StringBool("0.0.0.0", true),										//failure: expected T but was F
+		//new StringBool("facebook.com", true),									//failure: expected T but was F
+		//new StringBool("facebook.edu", true),									//failure: expected T but was F
+		new StringBool("", false),
+		new StringBool("a://a.a.a", false),
+		//new StringBool("www.facebook.com/fb", true),							//failure: expected T but was F
+		new StringBool("http://www.facebook.com/fb", true),
+		new StringBool("http://www.facebook.com/fb/bf", true),
+		//new StringBool("facebook.com/fb", true),								//failure: expected T but was F
+		new StringBool("http://www.facebook.com/fb?a=c&b=d", true),
+		new StringBool("http://www.facebook.com/fb?a=c", true),
+		//new StringBool("www.facebook.com/w/index.php", true), 				//failure: expected T but was F
+		//new StringBool("www.facebook.com/w/index.php?query=string", true),	//failure: expected T but was F
+		//new StringBool("www.facebook.comwww.facebook.com", true),				//failure: expected T but was F
+		new StringBool("a", false)
+	};
+	String partitionTestURL1 = new String("http://www.facebook.com/fb?a=c&b=dm");
 
    public UrlValidatorTest(String testName) {
       super(testName);
    }
-
-   
    
    public void testManualTest()
    {
-//You can use this function to implement your manual testing	   
-	   
+	   for(int i = 0; i < manualTestURLs.length; i++) {
+		   tryTest(manualTestURLs[i]);
+	   }
    }
    
    
@@ -148,6 +193,27 @@ public class UrlValidatorTest extends TestCase {
       System.out.println("\n***END isValidScheme TEST***\n");
 
    }
+	
+   public void tryTest(StringBool url)
+   {
+	 assertEquals(url.s, url.b, val.isValid(url.s)); 
+   }
+   
+   public void printResult(StringBool url)
+   {
+	   System.out.println(url.s + " Expected: " + url.b);  
+   }
 
+   public class StringBool
+   {
+	    public String s;
+	    public boolean b;
+
+	    public StringBool(String s, boolean b)
+	    {
+	       this.s = s;
+	       this.b = b;  //Weather the individual part of url is valid.
+	    }
+	 }
 
 }
