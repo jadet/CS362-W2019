@@ -69,16 +69,196 @@ public class UrlValidatorTest extends TestCase {
 		   tryTest(manualTestURLs[i]);
 	   }
    }
-   
-   
+
+
    public void testYourFirstPartition()
    {
-	 //You can use this function to implement your First Partition testing	   
+      //First Partition, testing on Schemes
+      ResultPair[] partitionScheme1 = {
+              new ResultPair("http", true),
+              new ResultPair("https", true),
+              new ResultPair("ftp", true),
+              new ResultPair("facetime", true),
+              new ResultPair("h3t", true),
+              new ResultPair("://", false),
+              new ResultPair("http://", false),
+              new ResultPair("https://", false),
+              new ResultPair("http://www.google.com", false)
+      };
+
+      ResultPair[] partitionScheme2 = {
+              new ResultPair("http", true),
+              new ResultPair("https", true),
+              new ResultPair("ftp", true),
+              new ResultPair("facetime", false),
+              new ResultPair("h3t", false),
+              new ResultPair("://", false),
+              new ResultPair("http://", false),
+              new ResultPair("https://", false),
+              new ResultPair("http://www.google.com", false)
+      };
+
+      boolean b;
+      String result, expected;
+
+      UrlValidator validator1 = new UrlValidator(null, null, UrlValidator.ALLOW_ALL_SCHEMES);
+      UrlValidator validator2 = new UrlValidator();
+
+      System.out.print("**testYourFirstPartition()**\nisValidScheme on Schemes\n--START--\n");
+
+      for (int i = 0; i < partitionScheme1.length; i++) {
+         b = validator1.isValidScheme(partitionScheme1[i].item);
+         result = Boolean.toString(b);
+         b = partitionScheme1[i].valid;
+         expected = Boolean.toString(b);
+
+         System.out.print("\"" + partitionScheme1[i].item +  "\" returns " + result.toUpperCase() + ", expected " + expected.toUpperCase() + "\n");
+         assert(result == expected);
+      }
+
+      for (int i = 0; i < partitionScheme2.length; i++) {
+         b = validator2.isValidScheme(partitionScheme2[i].item);
+         result = Boolean.toString(b);
+         b = partitionScheme2[i].valid;
+         expected = Boolean.toString(b);
+
+         System.out.print("\"" + partitionScheme2[i].item +  "\" returns " + result.toUpperCase() + ", expected " + expected.toUpperCase() + "\n");
+         assert(result == expected);
+      }
+      System.out.print("--END--\n");
 
    }
-   
+
    public void testYourSecondPartition(){
-		 //You can use this function to implement your Second Partition testing	   
+      //Second Partition, testing on Authority
+      ResultPair[] partitionAuthority = {
+              new ResultPair("www.oregonstate.edu", true),
+              new ResultPair("255.255.255.255", true),
+              new ResultPair("124.com", true),
+              new ResultPair("go.net", true),
+              new ResultPair("wow.wow.wow", true),
+              new ResultPair("..com", false),
+              new ResultPair("google.com", true),
+              new ResultPair("give.me.the.loot.com", true),
+              new ResultPair("http://www.google.com", false)
+      };
+
+      boolean b;
+      String result, expected;
+
+      UrlValidator validator = new UrlValidator();
+
+      System.out.print("**testYourSecondPartition()**\nisValidAuthority on Authority\n--START--\n");
+
+      for (int i = 0; i < partitionAuthority.length; i++) {
+         b = validator.isValidAuthority(partitionAuthority[i].item);
+         result = Boolean.toString(b);
+         b = partitionAuthority[i].valid;
+         expected = Boolean.toString(b);
+
+         System.out.print("\"" + partitionAuthority[i].item +  "\" returns " + result.toUpperCase() + ", expected " + expected.toUpperCase() + "\n");
+         assert(result == expected);
+      }
+      System.out.print("--END--\n\n");
+
+   }
+
+   public void testYourThirdPartition(){
+      //Third Partition, testing on Port
+      ResultPair[] partitionPort = {
+              //new ResultPair(":80", true),
+              //new ResultPair(":65535", true),
+              new ResultPair(":99999", false),
+              new ResultPair(":65536", false),
+              new ResultPair("google.com:675", true),
+              new ResultPair("google.com:65535", true),
+              //new ResultPair("google.com:65536", false),
+              new ResultPair("http://www.google.com:80", false)
+      };
+
+      boolean b;
+      String result, expected;
+
+      UrlValidator validator = new UrlValidator();
+
+      System.out.print("**testYourThirdPartition()**\nisValidAuthority on Port\n--START--\n");
+
+      for (int i = 0; i < partitionPort.length; i++) {
+         b = validator.isValidAuthority(partitionPort[i].item);
+         result = Boolean.toString(b);
+         b = partitionPort[i].valid;
+         expected = Boolean.toString(b);
+
+         System.out.print("\"" + partitionPort[i].item +  "\" returns " + result.toUpperCase() + ", expected " + expected.toUpperCase() + "\n");
+         assert(result == expected);
+      }
+      System.out.print("--END--\n\n");
+
+   }
+
+   public void testYourFourthPartition(){
+      //Fourth Partition, testing on Path
+      ResultPair[] partitionPath = {
+              new ResultPair("/hello1", true),
+              new ResultPair("/itMe", true),
+              new ResultPair("/Jessica", true),
+              new ResultPair("/$money", true),
+              new ResultPair("/hello/itMe", true),
+              //new ResultPair("/t/t/t/t/", false),
+              new ResultPair("/path/", true),
+              new ResultPair("http://www.google.com/path", false),
+              new ResultPair("www.google.com/path", false)
+      };
+
+      boolean b;
+      String result, expected;
+
+      UrlValidator validator = new UrlValidator();
+
+      System.out.print("**testYourFourthPartition()**\nisValidPath on Path\n--START--\n");
+
+      for (int i = 0; i < partitionPath.length; i++) {
+         b = validator.isValidPath(partitionPath[i].item);
+         result = Boolean.toString(b);
+         b = partitionPath[i].valid;
+         expected = Boolean.toString(b);
+
+         System.out.print("\"" + partitionPath[i].item +  "\" returns " + result.toUpperCase() + ", expected " + expected.toUpperCase() + "\n");
+         assert(result == expected);
+      }
+      System.out.print("--END--\n\n");
+
+   }
+
+   public void testYourFifthPartition(){
+      //Fourth Partition, testing on Path
+      ResultPair[] partitionQuery = {
+              new ResultPair("watch?v=TcMBFSGVi1c", true),
+              //new ResultPair("https://www.youtube.com/watch?v=TcMBFSGVi1c", false),
+              new ResultPair("?ref=%2Fonline-degrees%2Fundergraduate%2Fonline-chemistry-lab-course%2F", true),
+              //new ResultPair("https://ecampus.oregonstate.edu/contact/form/portland.htm?ref=%2Fonline-degrees%2Fundergraduate%2Fonline-chemistry-lab-course%2F", false),
+              new ResultPair("?action=view", true),
+              new ResultPair("?y?=y?y", true),
+              //new ResultPair("http://www.google.com/?action=edit", false)
+      };
+
+      boolean b;
+      String result, expected;
+
+      UrlValidator validator = new UrlValidator();
+
+      System.out.print("**testYourFithPartition()**\nisValidQuery on Query\n--START--\n");
+
+      for (int i = 0; i < partitionQuery.length; i++) {
+         b = validator.isValidQuery(partitionQuery[i].item);
+         result = Boolean.toString(b);
+         b = partitionQuery[i].valid;
+         expected = Boolean.toString(b);
+
+         System.out.print("\"" + partitionQuery[i].item +  "\" returns " + result.toUpperCase() + ", expected " + expected.toUpperCase() + "\n");
+         assert(result == expected);
+      }
+      System.out.print("--END--\n\n");
 
    }
 
