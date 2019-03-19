@@ -63,6 +63,9 @@ runtests: testDrawCard
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
 
+tarantula: cardTest1
+	> tarantulaOut.txt
+	python tarantula.py > tarantulaOut.txt
 
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)

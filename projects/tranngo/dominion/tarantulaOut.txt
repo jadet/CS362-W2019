@@ -1,0 +1,405 @@
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+File 'dominion.c'
+Lines executed:1.59% of 626
+dominion.c:creating 'dominion.c.gcov'
+
+Total tests passed: 100
+Total tests failed: 0
+
+
+
